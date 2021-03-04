@@ -1,0 +1,33 @@
+#conteudo{
+    width: 400px;
+    margin: 100px 0px 0px 30px;
+    background-color: rgb(112, 245, 245);
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+html{
+    background-image: url("../images/bg.png");
+    background-repeat: repeat-x;
+}
+
+.lb{
+    margin-top: 10px;
+}
+
+label{
+    width: 200px;
+    margin-right: 10px;
+}
+
+input{
+    flex-direction: column ;
+    width: 80px;
+    margin-top: 10px;
+    
+}
+
+button{
+   margin-top: 10px;
+}
