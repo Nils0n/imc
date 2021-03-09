@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>Calculadora IMC</title>
+    </head>
+    <body>
+        
+        
+       
+        <div id="conteudo">
+            
+            <div > <img id="logo"   src="images/logo.png" alt="logo" width="400px" height="150px"></div>
+
+            <h1>Calculando IMC</h1>
+            
+            <div class="lb"><label for="peso">Informe seu peso</label></div>
+            <div class="ip"><input type="number" name="txtn1" id="txtn1"> </div>
+
+            <div class="lb"> <label for="altura">Informe sua altura</label></div>
+            <div class="ip"><input type="number" name="txtn2" id="txtn2"></div>
+
+            <div><button id="somar" onclick="somar()">CALCULAR</button> </div>
+
+            <h2>Resultado:</h2>
+            <h3 id="res"> </h3>
+            <p id="resultados"></p>
+           
+        </div>
+
+
+        <script>
+
+            document.getElementById('resultados').style.display = none;
+
+            function somar (){
+                var tn1 = window.document.getElementById('txtn1')
+                var tn2 = window.document.getElementById('txtn2')
+                var res = window.document.getElementById('res')
+                var resultados = window.document.getElementById('resultados')
+            
+
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+
+                var soma = n1 / (n2**2)
+
+                
+
+                
+                if (soma < 16.5) {
+                    res.innerHTML = ` Seu IMC é de: ${soma.toFixed(2)} Classificação: Muito Abaixo do Peso.  `
+                    resultados.innerHTML = `<strong> O que pode acontecer:</strong> Queda de cabelo, infertilidade, ausência menstrual.`
+
+                }
+
+                if (soma >=16.5 && soma < 18.5) {
+                    res.innerHTML = ` Seu IMC é de: ${soma.toFixed(2)} e é considerado: Abaixo do Peso`
+                    resultados.innerHTML = `<strong> O que pode acontecer:</strong> Fadiga, stress, ansiedade`
+                }
+
+                if (soma >= 18.5 && soma < 24.9) {
+                    res.innerHTML = ` Seu IMC é de: ${soma.toFixed(2)} e é considerado: Normal`
+                    resultados.innerHTML = `<strong> O que pode acontecer:</strong> Menor risco de doenças cardíacas e vasculares`
+                }
+
+                if (soma >=24.9 && soma < 29.9) {
+                    res.innerHTML = ` Seu IMC é de: ${soma.toFixed(2)} e é considerado: Acima do Peso`
+                    resultados.innerHTML = `<strong> O que pode acontecer:</strong> Fadiga, má circulação, varizes.`
+                }
+
+
+                if (soma >=29.9 && soma < 34.9) {
+                    res.innerHTML = ` Seu IMC é de: ${soma.toFixed(2)} e é considerado: Obesidade Grau I`
+                    resultados.innerHTML = `<strong> O que pode acontecer:</strong> Diabetes, angina, infarto, aterosclerose ,fadiga, má circulação e varizes.`
+                }
+
+                if (soma >= 34.9 && soma < 40) {
+                    res.innerHTML = ` Seu IMC é de: ${soma.toFixed(2)} e é considerado: Obesidade Grau II`
+                    resultados.innerHTML = `<strong> O que pode acontecer:</strong>Apneia do sono, falta de ar, diabetes, angina, infarto, aterosclerose ,fadiga, má circulação e varizes.`
+                }
+
+                if (soma >= 40) {
+                    res.innerHTML = ` Seu IMC é de: ${soma.toFixed(2)} e é considerado: Obesidade Grau III`
+                    resultados.innerHTML = `<strong> O que pode acontecer:</strong> Refluxo, dificuldade para se mover, escaras, diabetes, infarto, AVC, apneia do sono, falta de ar, diabetes, angina, infarto, aterosclerose ,fadiga, má circulação e varizes.`
+                }
+                
+            }
+
+        </script>
+
+
+</body>
+</html>
