@@ -1,33 +1,73 @@
-#conteudo{
-    width: 400px;
-    margin: 100px 0px 0px 30px;
-    background-color: rgb(112, 245, 245);
-    padding: 10px 20px;
-    font-family: Arial, Helvetica, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+#conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  margin: 100px 0px 0px 30px;
+  background-color: rgb(112, 245, 245);
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
 }
 
-html{
-    background-image: url("../images/bg.png");
-    background-repeat: repeat-x;
+html {
+  background-image: url("../images/bg.png");
+  background-repeat: repeat-x;
+  background-color: #e6e5e3;
 }
 
-.lb{
-    margin-top: 10px;
+.lb {
+  margin-top: 10px;
 }
 
-label{
-    width: 200px;
-    margin-right: 10px;
+label {
+  width: 200px;
+  margin-right: 10px;
 }
 
-input{
-    flex-direction: column ;
-    width: 80px;
-    margin-top: 10px;
-    
+input {
+  flex-direction: column;
+  width: 80px;
+  margin-top: 10px;
 }
 
-button{
-   margin-top: 10px;
+button {
+  margin-top: 20px;
+}
+
+#logo {
+  width: 400px;
+  height: 136px;
+  background-image: url("../images/logo.png");
+}
+
+footer {
+  display: flex;
+  justify-content: left;
+  margin-top: 3vh;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+label {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 750px) {
+  #conteudo {
+    margin-left: 0px;
+    width: 370px;
+  }
+
+  #logo {
+    width: 370px;
+    height: 136px;
+    background-image: url("../images/logomobile.png");
+  }
+
+  footer {
+    justify-content: center;
+    margin: 3vh auto;
+  }
 }
